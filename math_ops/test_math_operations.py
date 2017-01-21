@@ -1,5 +1,5 @@
 import unittest
-from math_operations import add_numbers, get_numbers
+from math_operations import add_numbers, get_numbers, divide_numbers
 
 class MathOps(unittest.TestCase):
 
@@ -8,6 +8,8 @@ class MathOps(unittest.TestCase):
         self.list_num_string = get_numbers(2,"3")
         self.list_string_num = get_numbers("2",3)
         self.list_all_string = get_numbers("2","3")
+        self.list_with_zero = get_numbers(1, 0)
+
     def test_method_adds_correcty(self):
         self.assertEqual(add_numbers(self.list_of_numbers), 5)
 
@@ -34,6 +36,9 @@ class MathOps(unittest.TestCase):
         type_number_1 = type(self.list_all_string[0]) == int or type(self.list_all_string[0]) == float
         type_number_2 = type(self.list_all_string[1]) == int or type(self.list_all_string[1]) == float
         self.assertFalse(type_number_1 and type_number_2)
+
+    def test_division_by_zero(self):
+        self.assertEqual(divide_numbers(self.list_with_zero), "Error")
 
 
 if __name__== '__main__':
