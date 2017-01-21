@@ -46,5 +46,8 @@ class MathOps(unittest.TestCase):
     def test_subtracts_correctly(self):
         self.assertEqual(subtract_numbers([3, 3]), 0)
 
+    def test_multiplies_correctly(self):
+        self.assertEqual(multiply_numbers([3, 3]), 9)
+
 if __name__== '__main__':
     unittest.main()
