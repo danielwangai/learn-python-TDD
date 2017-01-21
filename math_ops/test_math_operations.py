@@ -1,5 +1,5 @@
 import unittest
-from math_operations import add_numbers, get_numbers, divide_numbers
+from math_operations import add_numbers, get_numbers, divide_numbers, subtract_numbers, multiply_numbers
 
 class MathOps(unittest.TestCase):
 
@@ -42,6 +42,9 @@ class MathOps(unittest.TestCase):
 
     def test_divides_correctly(self):
         self.assertEqual(divide_numbers([3, 3]), 1)
+
+    def test_subtracts_correctly(self):
+        self.assertEqual(subtract_numbers([3, 3]), 0)
 
 if __name__== '__main__':
     unittest.main()
