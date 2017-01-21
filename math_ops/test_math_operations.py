@@ -16,6 +16,12 @@ class MathOps(unittest.TestCase):
         with self.assertRaises(TypeError):
             add_numbers(self.list_string_num)
 
+    def test_data_type_of_input_is_int_or_float(self):
+        # tests that both inputs are of type float or int
+        type_number_1 = type(self.list_of_numbers[0]) == int or type(self.list_of_numbers[0]) == float
+        type_number_2 = type(self.list_of_numbers[1]) == int or type(self.list_of_numbers[1]) == float
+        self.assertTrue(type_number_1 and type_number_2)
+
 
 if __name__== '__main__':
     unittest.main()
