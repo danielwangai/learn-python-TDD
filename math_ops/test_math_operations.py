@@ -22,6 +22,12 @@ class MathOps(unittest.TestCase):
         type_number_2 = type(self.list_of_numbers[1]) == int or type(self.list_of_numbers[1]) == float
         self.assertTrue(type_number_1 and type_number_2)
 
+    def test_data_type_of_atleast_one_input_not_int_or_float(self):
+        # tests at least one of inputs is of type int or float
+        type_number_1 = type(self.list_num_string[0]) == int or type(self.list_num_string[0]) == float
+        type_number_2 = type(self.list_num_string[1]) == int or type(self.list_num_string[1]) == float
+        self.assertFalse(type_number_1 and type_number_2)
+
 
 if __name__== '__main__':
     unittest.main()
