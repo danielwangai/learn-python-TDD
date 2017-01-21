@@ -40,6 +40,8 @@ class MathOps(unittest.TestCase):
     def test_division_by_zero(self):
         self.assertEqual(divide_numbers(self.list_with_zero), "Error")
 
+    def test_divides_correctly(self):
+        self.assertEqual(divide_numbers([3, 3]), 1)
 
 if __name__== '__main__':
     unittest.main()
